@@ -23,7 +23,7 @@
     <nav class="navbar">
         <div class="logo">
             <a href="#" id="burger">
-                <svg fill="none" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="#4A5568" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                <svg fill="none" height="35" viewBox="0 0 24 24" width="35" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="#4A5568" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
             </a>
             <a href="index.html">
                 <img src="https://bit.ly/matana-logo-horizontal" class="navLogo" alt="">
@@ -37,8 +37,15 @@
     </nav>
 </header>
 <body>
-    <aside id="side" class="sideOn">
-        <h1>Flexbox</h1>
+    <aside id="side" class="sideOff">
+        <div class="sideTitle">
+            <h1>Flexbox</h1>
+            <a href="#" id="burgerClose">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" width="40" height="40">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </a>
+        </div>
         <ul>
             <li><a href="#flexbox-1">Introduction to flexbox</a></li>
             <li><a href="#flexbox-2">Flex direction</a></li>
@@ -2094,9 +2101,14 @@
     <script>
         const side = document.getElementById('side');
         const burger = document.getElementById('burger');
+        const burgerClose = document.getElementById('burgerClose');
         burger.addEventListener('click', () => {
             side.classList.toggle('sideOn')
             side.classList.toggle('sideOff')
+        })
+        burgerClose.addEventListener('click', () => {
+            side.classList.remove('sideOn')
+            side.classList.add('sideOff')
         })
     </script>
 </body>
