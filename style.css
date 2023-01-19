@@ -4,6 +4,10 @@
 	--white: #f4faff;
 }
 
+html {
+    scroll-behavior: smooth !important;
+}
+
 body {
 	padding-inline: 5%;
 	font-family: "Poppins", sans-serif;
@@ -18,7 +22,6 @@ body {
     grid-template-columns: repeat(2,minmax(0,1fr));
     row-gap: 20px;
     column-gap: 50px;
-	margin-top: 50px;
     padding: 20px 0;
 }
 .logo{
@@ -181,3 +184,33 @@ input[type=text], input[type=email], input[type=number], input[type=submit] {
     cursor: pointer;
 }
 /* End Regis Form */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5a5a5a; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #838485; 
+}
+
+::-moz-selection { 
+/* Code for Firefox */
+    color: white;
+    background: #f81ce5;
+}
+    
+::selection {
+    color: white;
+    background: hsl(305, 94%, 70%);
+}
