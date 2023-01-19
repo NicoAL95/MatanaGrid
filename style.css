@@ -27,10 +27,17 @@ body {
 .logo{
     grid-column: span 1/span 1;
     display: flex;
+    align-items: center;
 }
 .navLogo{
     width: 150px;
     height: auto;
+}
+@media only screen and (max-width: 500px) {
+    .navLogo{
+        width: 80px;
+        height: auto;
+    }
 }
 .navLinks{
     grid-column: span 1/span 1;
