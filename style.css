@@ -26,6 +26,7 @@ body {
 }
 .logo{
     grid-column: span 1/span 1;
+    display: flex;
 }
 .navLogo{
     width: 150px;
