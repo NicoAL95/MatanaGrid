@@ -1,0 +1,149 @@
+:root {
+    --sidebar-width: 300px;
+}
+
+.head-code{
+    border-radius: 30px 30px 0 0 ;
+    background-color: #282C34;
+    padding-block: 10px;
+    padding-left: 20px;
+    margin-bottom: -25px !important;
+}
+.bullets{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+.bullet{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+.bullet:nth-child(1){
+    background-color: #FF5F56;
+}
+.bullet:nth-child(2){
+    background-color: #FFBD2E;
+    margin: 0 8px;
+}
+.bullet:nth-child(3){
+    background-color: #27C93F;
+}
+code {
+    border-radius: 0 0 30px 30px;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #758199;
+    white-space: pre-wrap;
+}
+pre {
+    margin: 0;
+    padding: 0;
+}
+.preview-snippet {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+@media only screen and (max-width: 1280px) {
+    .code-section {
+        min-width: 100% !important;
+    }
+}
+.code-section {
+    flex: 4;
+}
+.preview-section {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+.container-m3 {
+    padding-inline: 1.25em; 
+    padding-block: 10px;
+    background-color: hsl(220, 13%, 18%); 
+    color: hsl(220, 13%, 90%); 
+    text-align: center;
+    border-radius: 30px;
+    flex: 1;
+}
+.item-m3{
+    padding: 20px; 
+    background-color: hsl(220, 40%, 40%); 
+    color: hsl(220, 40%, 95%);
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.item-m3 p {
+    margin-block: 0;
+}
+.grid-container {
+    list-style: none; 
+    padding: 0; 
+}
+
+aside {
+    width: var(--sidebar-width);
+    height: 90vh;
+    margin: auto 0;
+    padding: 20px;
+    background-color: hsl(220, 13%, 18%);
+    color: hsl(220, 13%, 90%);
+    top: 25px;
+    left: 25px;
+    position: fixed;
+    overflow-y: auto;
+    border-radius: 20px;
+}
+
+aside h1 {
+    margin-top: 0;
+}
+
+aside ul{
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-block: 5px;
+}
+
+aside ul li a{
+    font-size: 14px;
+    text-decoration: none;
+    color: hsl(220, 13%, 90%);
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 300ms;
+}
+
+aside ul li a:hover{
+    font-size: 14px;
+    color: hsl(305, 94%, 70%);
+}
+
+body {
+    padding-left: calc(var(--sidebar-width) + 100px);
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        padding-left: 5%;
+    }
+    aside {
+        transform: translateX(-400px);
+    }
+    #burger {
+        display: inline;
+    }
+}
+
+#burger {
+    text-decoration: none;
+    display: none;
+}

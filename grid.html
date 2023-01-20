@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="flexbox.css">
+    <link rel="stylesheet" href="grid.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 </head>
 <header>
@@ -48,12 +48,18 @@
         </div>
         <ul>
             <li><a href="#grid-1">Introduction to grid</a></li>
+            <li><a href="#grid-2">Grid Column and Grid Row</a></li>
+            <li><a href="#grid-3">Grid Template Columns and Grid Template Rows</a></li>
+            <li><a href="#grid-4">Grid Gap</a></li>
         </ul>
     </aside>
     <main>
         <section id="grid-1">
             <h1>Introduction to grid</h1>
-            <p>Grid is something...</p>
+            <p>Grid used to set the two dimensional layout because it can handle column and row</p>
+
+            <!-- display: grid -->
+            <h2>display: grid</h2>
             <div class="preview-snippet">
                 <div class="code-section">
                     <div class="head-code">
@@ -66,30 +72,544 @@
 
                     <pre class="pre-snippet">
                         <code class="code-snippet"
-                        >&lt;div class=&#34;container-m3&#34;&gt;&#10;    &lt;div&gt;&#10;        &lt;h2&gt;Flex-Container&lt;/h2&gt;&#10;    &lt;/div&gt;&#10;    &lt;div&gt;&#10;        &lt;ul &#10;            style=&#34;display: flex; list-style: none; padding: 0; column-gap: 15px;&#34; &#10;        &gt;&#10;            &lt;li class=&#34;item-m3&#34;&gt;&#10;                &lt;p&gt;Flex-Item&lt;/p&gt;&#10;            &lt;/li&gt;&#10;            &lt;li class=&#34;item-m3&#34;&gt;&#10;                &lt;p&gt;Flex-Item&lt;/p&gt;&#10;            &lt;/li&gt;&#10;            &lt;li class=&#34;item-m3&#34;&gt;&#10;                &lt;p&gt;Flex-Item&lt;/p&gt;&#10;            &lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;</code>
+                        >&lt;ul &#10;    style=&#34;display: grid; grid-template-columns: auto auto auto; grid-gap: 10px;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Grid-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Grid-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Grid-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Grid-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Grid-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Grid-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;7&lt;/p&gt;&#10;        &lt;p&gt;Grid-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;8&lt;/p&gt;&#10;        &lt;p&gt;Grid-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;9&lt;/p&gt;&#10;        &lt;p&gt;Grid-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
                     </pre>
                 </div>
                 <div class="preview-section">
                     <div class="container-m3">
                         <div>
-                            <h2>Flex-Container</h2>
+                            <h2>Grid-Container</h2>
                         </div>
                         <div>
                             <ul 
-                                style="display: flex; column-gap: 10px;" 
-                                class="flex-container"
+                                style="display: grid; grid-template-columns: auto auto auto; grid-gap: 10px;" 
+                                class="grid-container"
                             >
                                 <li class="item-m3">
                                     <p>1</p>
-                                    <p>Flex-Item</p>
+                                    <p>Grid-Item</p>
                                 </li>
                                 <li class="item-m3">
                                     <p>2</p>
-                                    <p>Flex-Item</p>
+                                    <p>Grid-Item</p>
                                 </li>
                                 <li class="item-m3">
                                     <p>3</p>
-                                    <p>Flex-Item</p>
+                                    <p>Grid-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Grid-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Grid-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Grid-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>7</p>
+                                    <p>Grid-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>8</p>
+                                    <p>Grid-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>9</p>
+                                    <p>Grid-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- display: inline-grid -->
+            <h2>display: inline-grid</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: inline-grid; grid-template-columns: auto auto auto; grid-gap: 10px;&#34; &#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Grid-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Grid&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;7&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;8&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;9&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Inline-Grid-Container</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: inline-grid; grid-template-columns: auto auto auto; grid-gap: 10px;" 
+                                class="grid-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Grid-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Grid</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>7</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>8</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>9</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="grid-2">
+            <h1>Grid Column and Grid Row</h1>
+            
+            <!-- grid-column and grid-row -->
+            <!-- grid-column -->
+            <h2>grid-column</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: grid; grid-template-columns: auto auto auto; grid-gap: 10px;&#34; &#10;&gt;&#10;    &lt;li style=&#34;grid-column: 1 / span 2&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;7&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;8&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Grid-Column</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: grid; grid-template-columns: auto auto auto; grid-gap: 10px;" 
+                                class="grid-container"
+                            >
+                                <li class="item-m3" style="grid-column: 1 / span 2">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>7</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>8</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- grid-row -->
+            <h2>grid-row</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: grid; grid-template-columns: auto auto auto; grid-gap: 10px;&#34; &#10;&gt;&#10;    &lt;li style=&#34;grid-row: 1 / span 2;&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;7&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;8&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Grid-Row</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: grid; grid-template-columns: auto auto auto; grid-gap: 10px;" 
+                                class="grid-container"
+                            >
+                                <li class="item-m3" style="grid-row: 1 / span 2;">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>7</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>8</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="grid-3">
+            <h1>Grid Template Columns and Grid Template Rows</h1>
+            
+            <!-- grid-template-columns and grid-template-rows -->
+            <!-- grid-template-columns -->
+            <h2>grid-template-columns</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: grid; grid-template-columns: 100px 150px 300px; grid-gap: 10px;&#34; &#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;7&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;8&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;9&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Grid-Template-Columns 100px 150px 300px</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: grid; grid-template-columns: 100px 150px 300px; grid-gap: 10px;" 
+                                class="grid-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>7</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>8</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>9</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- grid-template-rows -->
+            <h2>grid-template-rows</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: grid; grid-template-columns: auto auto auto; grid-gap: 10px;&#34; &#10;&gt;&#10;    &lt;li style=&#34;grid-column: 1 / span 2&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;7&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;8&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Grid-Template-Rows 100px 150px 300px</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: grid; grid-template-columns: auto auto auto; grid-template-rows: 100px 150px 300px; grid-gap: 10px;" 
+                                class="grid-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>7</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>8</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>9</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="grid-4">
+            <h1>Grid Gap</h1>
+            
+            <!-- grid-gap -->
+            <h2>grid-gap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: grid; grid-template-columns: auto auto auto; grid-gap: 20px;&#34; &#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;7&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;8&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;9&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Grid-Gap 20px</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: grid; grid-template-columns: auto auto auto; grid-gap: 20px;" 
+                                class="grid-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>7</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>8</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>9</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- grid-column-gap -->
+            <h2>grid-column-gap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: grid; grid-template-columns: auto auto auto; grid-column-gap: 20px; grid-row-gap: 10px&#34; &#10;&gt;&#10;    &lt;li style=&#34;grid-column: 1 / span 2&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;7&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;8&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Grid-Column-Gap 20px</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: grid; grid-template-columns: auto auto auto; grid-column-gap: 20px; grid-row-gap: 10px" 
+                                class="grid-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>7</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>8</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>9</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- grid-row-gap -->
+            <h2>grid-row-gap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: grid; grid-template-columns: auto auto auto; grid-row-gap: 20px; grid-column-gap: 10px&#34; &#10;&gt;&#10;    &lt;li style=&#34;grid-column: 1 / span 2&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;7&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;8&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Grid-row-Gap 20px</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: grid; grid-template-columns: auto auto auto; grid-row-gap: 20px; grid-column-gap: 10px" 
+                                class="grid-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>7</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>8</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>9</p>
                                 </li>
                             </ul>
                         </div>
