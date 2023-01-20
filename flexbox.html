@@ -50,6 +50,13 @@
             <li><a href="#flexbox-1">Introduction to flexbox</a></li>
             <li><a href="#flexbox-2">Flex direction</a></li>
             <li><a href="#flexbox-3">Flex grow</a></li>
+            <li><a href="#flexbox-4">Flex shrink</a></li>
+            <li><a href="#flexbox-5">Flex wrap</a></li>
+            <li><a href="#flexbox-6">Flex flow</a></li>
+            <li><a href="#flexbox-7">Flex basis</a></li>
+            <li><a href="#flexbox-8">Flex</a></li>
+            <li><a href="#flexbox-9">Justify Content</a></li>
+            <li><a href="#flexbox-10">Align Items</a></li>
         </ul>
     </aside>
     <main>
@@ -285,8 +292,51 @@
         <!-- Flex Grow-->
         <section id="flexbox-3">
             <h1>Flexbox grow</h1>
-            <p>Specify how flex item grow in flex container</p>
+            <p>Increase the width of the item. The default value of flex-grow is 1</p>
+
             
+            <h2>Default Value</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; flex-direction: row; column-gap: 10px;&#34;&#10;&gt;&#10;    &lt;li style=&#34;flex-grow: 1;&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li style=&#34;flex-grow: 1;&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li style=&#34;flex-grow: 1;&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Grow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; flex-direction: row; column-gap: 10px;"
+                                class="flex-container"
+                            >
+                                <li class="item-m3" style="flex-grow: 1;">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3" style="flex-grow: 1;">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3" style="flex-grow: 1;">
+                                    <p>1</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Flex-Grow</h2>
             <div class="preview-snippet">
                 <div class="code-section">
                     <div class="head-code">
@@ -304,20 +354,1741 @@
                 </div>
                 <div class="preview-section">
                     <div class="container-m3">
-                        <ul 
-                            style="display: flex; flex-direction: row; column-gap: 10px;"
-                            class="flex-container"
-                        >
-                            <li class="item-m3" style="flex-grow: 1;">
-                                <p>1</p>
-                            </li>
-                            <li class="item-m3" style="flex-grow: 2;">
-                                <p>2</p>
-                            </li>
-                            <li class="item-m3" style="flex-grow: 1;">
-                                <p>1</p>
-                            </li>
+                        <div>
+                            <h2>Flex-Grow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; flex-direction: row; column-gap: 10px;"
+                                class="flex-container"
+                            >
+                                <li class="item-m3" style="flex-grow: 1;">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3" style="flex-grow: 2;">
+                                    <p>2</p>
+                                </li>
+                                <li class="item-m3" style="flex-grow: 1;">
+                                    <p>1</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </section>
+
+        <!-- Flex Shrink-->
+        <section id="flexbox-4">
+            <h1>Flexbox Shrink</h1>
+            <p>Decrease the width of the item. The default value of flex-shrink is 1.</p>
+            
+            <h2>Default value</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
                         </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; flex-direction: row; column-gap: 10px;&#34;&#10;&gt;&#10;    &lt;li style=&#34;flex-shrink: 1;&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li style=&#34;flex-shrink: 1;&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li style=&#34;flex-shrink: 1;&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Shrink</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; flex-direction: row; column-gap: 10px;"
+                                class="flex-container"
+                            >
+                                <li class="item-m3" style="flex-shrink: 1;">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3" style="flex-shrink: 1;">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3" style="flex-shrink: 1;">
+                                    <p>1</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Flex-Shrink</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; flex-direction: row; column-gap: 10px;&#34;&#10;&gt;&#10;    &lt;li style=&#34;flex-shrink: 1;&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li style=&#34;flex-shrink: 2;&#34;&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li style=&#34;flex-shrink: 1;&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Shrink</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; flex-direction: row; column-gap: 10px;"
+                                class="flex-container"
+                            >
+                                <li class="item-m3" style="flex-shrink: 1;">
+                                    <p>1</p>
+                                </li>
+                                <li class="item-m3" style="flex-shrink: 2;">
+                                    <p>2</p>
+                                </li>
+                                <li class="item-m3" style="flex-shrink: 1;">
+                                    <p>1</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flex Wrap-->
+        <section id="flexbox-5">
+            <h1>Flexbox Wrap</h1>
+            <p>To prevent overflow of the items in the container. The default value for flex-wrap is nowrap.</p>
+            
+            <h2>flex-wrap: wrap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; flex-direction: row; column-gap: 10px; row-gap: 10px; flex-wrap: wrap;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Wrap</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; flex-direction: row; column-gap: 10px; row-gap: 10px; flex-wrap: wrap;"
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3" >
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3" >
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>flex-wrap: nowrap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; flex-direction: row; column-gap: 10px; row-gap: 10px; flex-wrap: nowrap;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Wrap</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; flex-direction: row; column-gap: 10px; row-gap: 10px; flex-wrap: nowrap;"
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3" >
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3" >
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <h2>flex-wrap: wrap-reverse</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; flex-direction: row; column-gap: 10px; row-gap: 10px; flex-wrap: wrap-reverse;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Wrap</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; flex-direction: row; column-gap: 10px; row-gap: 10px; flex-wrap: wrap-reverse;"
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3" >
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3" >
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flex Flow-->
+        <section id="flexbox-6">
+            <h1>Flex-Flow</h1>
+            <p>Shorthand from flex-direction and flex-wrap. The default value for flex-flow is row nowrap.</p>
+
+            <h2>Flex-Flow: row wrap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: row wrap;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: row wrap;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex-Flow: row nowrap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: row nowrap;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: row nowrap;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex-Flow: row wrap-reverse</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: row wrap-reverse;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: row wrap-reverse" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex-Flow: row-reverse wrap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: row-reverse wrap;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: row-reverse wrap;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex-Flow: row-reverse nowrap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: row-reverse nowrap;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: row-reverse nowrap;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex-Flow: row-reverse wrap-reverse</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: row-reverse wrap-reverse;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: row-reverse wrap-reverse;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <h2>Flex-Flow: column wrap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: column wrap; height: 200px;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: column wrap; height: 200px;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex-Flow: column nowrap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: column nowrap;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: column nowrap;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex-Flow: column wrap-reverse</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: column wrap-reverse; height: 200px;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: column wrap-reverse; height: 200px;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex-Flow: column-reverse wrap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: column-reverse wrap; height: 200px;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: column-reverse wrap; height: 200px;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex-Flow: column-reverse nowrap</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: column-reverse nowrap;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: column-reverse nowrap;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex-Flow: column-reverse wrap-reverse</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; row-gap:10px; flex-flow: column-reverse wrap-reverse; height: 200px;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Flow</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; row-gap:10px; flex-flow: column-reverse wrap-reverse; height: 200px;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flex Basis-->
+        <section id="flexbox-7">
+            <h1>Flex-Basis</h1>
+            <p>Specify the default size of the flex item.</p>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px;&#34;&#10;&gt;&#10;    &lt;li style=&#34;flex-basis: 25%;&#34;&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;25%&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li style=&#34;flex-basis: 25%;&#34;&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;25%&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li style=&#34;flex-basis: 25%;&#34;&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;25%&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li style=&#34;flex-basis: 25%;&#34;&gt;&#10;        &lt;p&gt;4&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;25%&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;&#10;&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px;&#34;&#10;&gt;&#10;    &lt;li style=&#34;flex-basis: 25%;&#34;&gt;&#10;        &lt;p&gt;5&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;25%&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li style=&#34;flex-basis: 50%;&#34;&gt;&#10;        &lt;p&gt;6&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;50%&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li style=&#34;flex-basis: 25%;&#34;&gt;&#10;        &lt;p&gt;7&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;25%&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex-Basis</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3" style="flex-basis: 25%;">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                    <p>25%</p>
+                                </li>
+                                <li class="item-m3" style="flex-basis: 25%;">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                    <p>25%</p>
+                                </li>
+                                <li class="item-m3" style="flex-basis: 25%;">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                    <p>25%</p>
+                                </li>
+                                <li class="item-m3" style="flex-basis: 25%;">
+                                    <p>4</p>
+                                    <p>Flex-Item</p>
+                                    <p>25%</p>
+                                </li>
+                            </ul>
+                            <ul 
+                                style="display: flex; column-gap: 10px;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3" style="flex-basis: 25%;">
+                                    <p>5</p>
+                                    <p>Flex-Item</p>
+                                    <p>25%</p>
+                                </li>
+                                <li class="item-m3" style="flex-basis: 50%;">
+                                    <p>6</p>
+                                    <p>Flex-Item</p>
+                                    <p>50%</p>
+                                </li>
+                                <li class="item-m3" style="flex-basis: 25%;">
+                                    <p>7</p>
+                                    <p>Flex-Item</p>
+                                    <p>25%</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flex-->
+        <section id="flexbox-8">
+            <h1>Flex</h1>
+            <p>Shorthand from flex-grow, flex-shrink, and flex-basis. Default value of flex is 0 1 auto.
+                Value of flex can be : <br>
+                - auto : 1 1 auto <br>
+                - initial : 0 1 auto <br>
+                - none : 0 0 auto
+                </p>
+
+            <h2>Flex: 1 2 Auto </h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; flex: 1 2 auto;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; flex: 1 2 auto;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex: Auto</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; flex: auto;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; flex: auto;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex: None</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; flex: none;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; flex: none;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Flex: Initial</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; flex: initial;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Flex</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; flex: initial;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Justify Content-->
+        <section id="flexbox-9">
+            <h1>Justify Content</h1>
+            <p>To align items in the x axis or horizontal axis.</p>
+
+            <h2>Justify-Content: Flex-Start</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; justify-content: flex-start;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Justify Content</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; justify-content: flex-start;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Justify-Content: Center</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; justify-content: center;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Justify Content</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; justify-content: center;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Justify-Content: Flex-End</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; justify-content: flex-end;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Justify Content</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; justify-content: flex-end;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Justify-Content: Space-Between</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; justify-content: space-between;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Justify Content</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; justify-content: space-between;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Justify-Content: Space-Around</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; justify-content: space-around;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Justify Content</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; justify-content: space-around;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Justify-Content: Space-Evenly</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; justify-content: space-evenly;&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Justify Content</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; justify-content: space-evenly;" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Align Items-->
+        <section id="flexbox-10">
+            <h1>Align Items</h1>
+            <p>To align items in the y axis or vertical axis.</p>
+
+            <h2>Align-Items: Flex-Start</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; align-items: flex-start; height: 200px&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Align Items</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; align-items: flex-start; height: 200px" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Align-Items: Center</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; align-items: center; height: 200px&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Align Items</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; align-items: center; height: 200px" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Align-Items: Flex-End</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; align-items: flex-end; height: 200px&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Align Items</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; align-items: flex-end; height: 200px" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Align-Items: Stretch</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; align-items: stretch; height: 200px&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Align Items</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; align-items: stretch; height: 200px" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Align-Items: Baseline</h2>
+            <div class="preview-snippet">
+                <div class="code-section">
+                    <div class="head-code">
+                        <ul class="bullets">
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                            <li class="bullet"></li>
+                        </ul>
+                    </div>
+
+                    <pre class="pre-snippet">
+                        <code class="code-snippet"
+                        >&lt;ul &#10;    style=&#34;display: flex; column-gap: 10px; align-items: baseline; height: 200px&#34;&#10;&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;1&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;2&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;p&gt;3&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;        &lt;p&gt;Flex-Item&lt;/p&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;</code>
+                    </pre>
+                </div>
+                <div class="preview-section">
+                    <div class="container-m3">
+                        <div>
+                            <h2>Align Items</h2>
+                        </div>
+                        <div>
+                            <ul 
+                                style="display: flex; column-gap: 10px; align-items: baseline; height: 200px" 
+                                class="flex-container"
+                            >
+                                <li class="item-m3">
+                                    <p>1</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>2</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                                <li class="item-m3">
+                                    <p>3</p>
+                                    <p>Flex-Item</p>
+                                    <p>Flex-Item</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
