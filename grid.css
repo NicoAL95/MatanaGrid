@@ -138,12 +138,31 @@ body {
     aside {
         transform: translateX(-400px);
     }
+    .sideOff {
+        transform: translateX(-400px) !important;
+    }
+    .sideOn {
+        left: 25px !important;
+    }
     #burger {
-        display: inline;
+        display: block !important;
+    }
+    #burgerClose {
+        display: block !important;
     }
 }
 
 #burger {
     text-decoration: none;
     display: none;
+}
+
+#burgerClose{
+    display: none;
+}
+
+.sideTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
