@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <link rel="icon" type="image/x-icon" href="https://bit.ly/matana-logo-vertical">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flexbox.css">
+    <link rel="stylesheet" href="playground.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        textarea {
+            width: 32%;
+            float: top;
+            min-height: 250px;
+            overflow: scroll;
+            margin: auto;
+            display: inline-block;
+            background: #f4f4f9;
+            outline: none;
+            font-family: Courier, sans-serif;
+            font-size: 14px;
+        }
+
+        iframe {
+            bottom: 0;
+            position: relative;
+            width: 100%;
+            height: 35em;
+        }
+    </style>
+</head>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#" id="burger">
+                <svg fill="none" height="35" viewBox="0 0 24 24" width="35" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="#4A5568" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+            </a>
+            <a href="index.html">
+                <img src="https://bit.ly/matana-logo-horizontal" class="navLogo" alt="">
+            </a>
+        </div>
+        <div class="navLinks">
+            <a href="index.html" style="margin-right: 25px;">Home</a>
+            <a href="flexbox.html" style="margin-right: 25px">Flexbox</a>
+            <a href="grid.html" style="margin-right: 25px">Grid</a>
+            <a href="playground.html">JS Playground</a>
+        </div>
+    </nav>
+</header>
+<body>
+    <textarea id="js" placeholder="JavaScript"></textarea>
+    <button onclick="evaluateCode()">Evaluate</button>
+    <iframe id="code">
+    </iframe>
+
+    <script type="text/javascript">
+        let js = document.getElementById("js");
+        let code = document.getElementById("code").contentWindow.document;
+
+        let oldLog = console.log;
+        console.log = function(message) {
+            code.writeln(`<code>${message}</code> <br />`);
+            oldLog.apply(console, arguments);
+        }
+
+        let oldError = console.error;
+        console.error = function(message) {
+            code.writeln(`<code style="color: red !important;">${message}</code> <br />`);
+            oldError.apply(console, arguments);
+        }
+
+        function evaluateCode() {
+            code.open();
+            try {
+                eval(js.value);
+            } catch (e) {
+                console.error(e.toString());
+            }
+            code.close();
+        }
+    </script>
+</body>
+</html>
