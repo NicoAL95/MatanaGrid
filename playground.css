@@ -1,7 +1,51 @@
-    
-        .log{
-            color: blue !important;
-        }
-        .error{
-            color: red !important;
-        }
+.playFlex{
+    display: flex;
+    gap: 10px;
+}
+
+
+.textEdit{
+    width: 100% !important;
+}
+
+
+#js {
+    width: 100% !important;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: black;
+    border-radius: 0px 0px 15px 15px;
+    background-color: white;
+    padding: 0 !important;
+    min-height: 400px;
+}
+
+.textHead{
+    width: 100% !important;
+    height: 50px;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    border-color: black;
+    border-radius: 15px 15px 0px 0px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.evalBut{
+    background-color: rgb(59, 94, 247);
+    color: white;
+    border: 0;
+    padding: 10px 20px !important;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#code{
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: white;
+    height: 450px;
+}
