@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Playground</title>
+    <title>Flexbox</title>
 
     <link rel="icon" type="image/x-icon" href="https://bit.ly/matana-logo-vertical">
 
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="flexbox.css">
     <link rel="stylesheet" href="playground.css">
+    <link rel="stylesheet" href="domplayground.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <style>
         body {
@@ -66,57 +67,43 @@
 </header>
 <body style="padding: 0 !important;">
     
-    <div class="playFlex">
-        <div style="width: 50%;">
-            <div class="textEdit">
-                <div class="textHead">
-                    <h6>GDSC Matana Text Editor</h6>
-                </div>
-                <textarea id="js" placeholder="JavaScript"></textarea>
+    <div class="showBoxWrap">
+        <div class="showBox">
+            <div class="textHead">
+                <h6>GDSC Matana Preview Editor</h6>
             </div>
-            <button class="evalBut" onclick="evaluateCode()">Evaluate</button>
-        </div>
-        <div style="width: 50%;">
-            <iframe id="code">
-            </iframe>
+            <iframe id="iFrame"></iframe>
         </div>
     </div>
-
-    <script type="text/javascript">
-        let js = document.getElementById("js");
-        let code = document.getElementById("code").contentWindow.document;
-
-        let oldLog = console.log;
-        console.log = function(message) {
-            code.writeln(`<code>${message}</code> <br />`);
-            oldLog.apply(console, arguments);
-        }
-
-        let oldError = console.error;
-        console.error = function(message) {
-            code.writeln(`<code style="color: red !important;">${message}</code> <br />`);
-            oldError.apply(console, arguments);
-        }
-
-        function evaluateCode() {
-            code.open();
-            try {
-                eval(js.value);
-            } catch (e) {
-                console.error(e.toString());
-            }
-            code.close();
-        }
-        document.getElementById('js').addEventListener('keydown', function(e) {
-            if (e.key == 'Tab') {
-                e.preventDefault();
-                var start = this.selectionStart;
-                var end = this.selectionEnd;
-                this.value = this.value.substring(0, start) +
-                "    " + this.value.substring(end);
-                this.selectionStart = this.selectionEnd = start + 4;
-            }
-        });
-    </script>
+    <div class="playFlex">
+        <div style="width: 33.3%;">
+            <div class="textEdit">
+                <div class="textHead">
+                    <h6>GDSC Matana HTML Editor</h6>
+                </div>
+                <textarea style="float:left" placeholder="HTML" id="htmlTextarea" class="playBox"></textarea>
+            </div>
+        </div>
+        <div style="width: 33.3%;">
+            <div class="textEdit">
+                <div class="textHead">
+                    <h6>GDSC Matana CSS Editor</h6>
+                </div>
+                <textarea style="float:left" placeholder="CSS" id="cssTextarea" class="playBox"></textarea>
+            </div>
+        </div>
+        <div style="width: 33.3%;">
+            <div class="textEdit">
+                <div class="textHead">
+                    <h6>GDSC Matana JS Editor</h6>
+                </div>
+                <textarea style="float:left" placeholder="JavaScript" id="jsTextarea" class="playBox"></textarea>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="evalBut" onclick="evaluateCode()">Evaluate</button>
+    </div>
+    <script src="editor.js"></script>
 </body>
 </html>
